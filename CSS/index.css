@@ -1,3 +1,15 @@
+:root{
+
+    --font-primary-color:white;
+    --font-second-color:#8CC084;
+
+    --background-primary-color:#067BC2;
+    --background-second-color:#84BCDA;
+    --background-three-color: #8CC084;
+
+
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -7,24 +19,40 @@
 /*  header  */
 .header{
     height: 110px;
+    width: 100%;
+    padding: 0 4rem;
 
 
-    background-color:  #067BC2;
-    color: white;
+    background-color:  var(--background-primary-color);
+    color: var(--font-primary-color);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
-
+.logo:hover{
+    color: var(--font-second-color) ;
+}
 .header__content{
     display: flex;
     list-style: none;
     gap: 3rem;
 }
-
-.header__button{
-    padding: 2rem;
-    border: 1px solid black;
+.button{
+    color: var(--font-primary-color);
+    border: 1px solid var(--font-primary-color);
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 1rem;
+}
+.button:hover{
+    background-color: #FF785A;
+    border: none;
+    transition: .2s ease-in;
+}
+.header__button--main{
+    color: white;
+    border: none;
+    background-color: var(--background-three-color);
 }
 
 .main{
@@ -40,26 +68,37 @@
     height: 845px;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    border: 2px solid black;
+    gap: 2rem;
+    /* border: 2px solid black; */
+}
+.line{
+    width: 50%;
+    height: 1px;
+    border: none;
+    background-color: black;
 }
 .main__form{
+
     border: black solid 1px;
-    box-shadow: 2px 2px 5px #8CC084;
+    box-shadow: 2px 2px 5px var(--background-three-color);
     border-radius: 10px;
-    background-color: #84BCDA;
+    background-color: var(--background-second-color);
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    padding: 2rem;
+    padding: 3rem;
+
+    width: 500px;
 }
 .figure{
-    border: 2px solid black;
+    /* border: 2px solid black; */
 
     width: 50%;
     height: 845px;
