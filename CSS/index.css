@@ -18,7 +18,7 @@
 }
 /*  header  */
 .header{
-    height: 110px;
+    height: 70px;
     width: 100%;
     padding: 0 4rem;
 
@@ -31,6 +31,7 @@
 }
 .logo:hover{
     color: var(--font-second-color) ;
+    text-shadow: 3px 3px 3px black;
 }
 .header__content{
     display: flex;
@@ -43,6 +44,9 @@
     border-radius: 10px;
     text-decoration: none;
     padding: 1rem;
+
+    background-color: transparent;
+
 }
 .button:hover{
     background-color: #FF785A;
@@ -56,56 +60,67 @@
 }
 
 .main{
+    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+}
+.main-content{
     width: 100%;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-}
-.main__section{
-    width: 50%;
-    height: 845px;
-
+    height: 100vh;
+    border: 2px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    gap: 2rem;
-    /* border: 2px solid black; */
 }
-.line{
-    width: 50%;
-    height: 1px;
-    border: none;
-    background-color: black;
-}
-.main__form{
+.main-target{
+    background-color: #067BC2;
+    color: white;
 
-    border: black solid 1px;
-    box-shadow: 2px 2px 5px var(--background-three-color);
-    border-radius: 10px;
-    background-color: var(--background-second-color);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    padding: 3rem;
 
     width: 500px;
-}
-.figure{
-    /* border: 2px solid black; */
-
-    width: 50%;
-    height: 845px;
+    height: 400px;
+    padding: 1.5rem;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
+}
+.title{
+    text-align: center;
+}
+.line{
+    width: 100%;
+    height: 4px;
+    color: black;
+}
+.main-form{
+    background-color: #84BCDA;
+    border: 1px solid white;
+    border-radius: 20px;
+
+    width: 100%;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+}
+.btn{
+    
+}
+
+.figure{
+    border: 2px solid black;
+    width: 100%;
+    height: 100vh;
+    
 }
 .img{
     width: 100%;
