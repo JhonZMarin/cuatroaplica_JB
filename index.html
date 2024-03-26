@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Citas Medicas</title>
-
-    <!-- hoja de estilos css general  -->
+    <title>Document</title>
     <link rel="stylesheet" href="./CSS/index.css">
 
+    <!-- iconos  -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
     <header class="header">
@@ -31,45 +32,51 @@
         </ul>
     </header>
     <main class="main">
-        <section class="main-content">
-            <section class="main-target">
+        <section class="section">
+            <section class="section__target">
                 <h2 class="title">Bienvenido, saca tu cita facil y rapido!!!</h2>
                 <hr class="line">
-                <form class="main-form" action="">
 
-                    <input name="name" type="text" placeholder="Nombre Completo" required>
+                <form class="form" action="">
+                    <div class="input-box">
+                        <input class="input" name="name" type="text" placeholder="Nombre Completo" required>
+                        <i class="icon bi bi-person-fill"></i>
+                    </div>
 
-                    <input name="name" type="text" placeholder="Cita Por" required>
+                    <div class="input-box">
+                        <select class="input input--special" title="a" name="especialidades" required>
+                            <option disabled selected>Cita Por: Seleccione La Especialidad</option>
+                            <option value="1">General</option>
+                            <option value="2">Cardiologia</option>
+                            <option value="3">Neurologia</option>
+                            <option value="4">Ginecologia</option>
+                            <option value="5">Urologia</option>
+                            <option value="6">Optometria</option>
+                        </select>
+                        <i class="icon bi bi-heart-pulse"></i>
+                    </div>
+                    
+                    <div class="input-box">
+                        <input class="input" name="telefono" type="tel" placeholder="Telefono" required>
+                        <i class="icon bi bi-telephone"></i>
+                    </div>
+                    
+                    <div class="input-box">
+                        <input class="input input--special" name="fechas" type="datetime-local">
+                    </div>
 
-                    <input name="name" type="text" placeholder="Fechas" required>
-
-                    <input name="name" type="text" placeholder="Horario" required>
-
-                    <button class="button" type="submit">Enviar</button>
+                    <button name="boton" class="btn" type="submit">Enviar <i class="bi bi-send-check"></i></button>
                 </form>
             </section>
         </section>
-        <!-- <section class="main__section">
-            <h2>Bienvenido, saca tu cita facil y rapido!!!</h2>
-            <hr class="line">
-            <form class="main__form" action="">
-                <input type="text">
-                <label for="">Ingresa Tu Nombre</label>
-                <input type="text">
-                <label for="">Ingresa Tu Nombre</label>
-                <input type="text">
-                <label for="">Ingresa Tu Nombre</label>
-                <input type="text">
-                <label for="">Ingresa Tu Nombre</label>
-                <input type="text">
-                <label for="">Ingresa Tu Nombre</label>
-                <input type="text">
-            </form>
-        </section> -->
-        <figure class="figure">
-            <img class="img" src="./IMG/salud.png" alt="">
-        </figure>
+        <section class="section">
+            <figure class="figure">
+                <img class="figure__img" src="./IMG/salud.png" alt="">
+            </figure>
+            <figcaption class="main-title">Aplicacion De Citas Medicas</figcaption>
+        </section>
+        
+        
     </main>
-    <script src="./JS/script.js"></script>
 </body>
 </html>
