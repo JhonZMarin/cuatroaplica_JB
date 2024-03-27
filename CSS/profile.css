@@ -1,0 +1,46 @@
+/* perfiles medicos  */
+.profiles{
+    background-color: rgba(6, 122, 194, 0.8);
+    border: 2px solid  rgba(255, 255, 255, 0.6);
+    
+}
+.grid__cards{
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    /* grid-template-rows: minmax( 100px, 100px); */
+
+    grid-auto-rows: minmax(200px, auto);
+
+    justify-items: center;
+    align-items: center;
+
+    gap: 1rem;
+
+    /* border: 2px solid  rgba(255, 255, 255, 0.6); */
+    margin: 2rem;
+
+}
+.card{
+    /* padding: 2rem; */
+
+    /* width: 150px; */
+    /* height: 150px; */
+    
+    text-align: center;
+
+    border: rgba(255, 255, 255, 0.6) 4px solid;
+    background-color: #8CC084;
+    backdrop-filter: blur(20px);
+}
+.prueba{
+    align-self: end;
+}
+.prueba1{
+    justify-self: stretch;
+}
+.card:hover{
+    /* border: rgba(255, 255, 255, 0.6) 4px solid; */
+    border:  #FF785A 4px solid;
+}
