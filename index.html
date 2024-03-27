@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pagina Principal</title>
 
     <!-- hoja de estilos general  -->
     <link rel="stylesheet" href="./CSS/index.css">
@@ -41,7 +41,7 @@
                 <h2 class="title">Bienvenido, saca tu cita facil y rapido!!!</h2>
                 <hr class="line">
 
-                <form class="form" action="">
+                <form class="form" action="" id="form">
                     <div class="input-box">
                         <input class="input" name="name" type="text" placeholder="Nombre Completo" required>
                         <i class="icon bi bi-person-fill"></i>
@@ -52,10 +52,16 @@
                             <option disabled selected>Cita Por: Seleccione La Especialidad</option>
                             <option value="1">General</option>
                             <option value="2">Cardiologia</option>
-                            <option value="3">Neurologia</option>
-                            <option value="4">Ginecologia</option>
-                            <option value="5">Urologia</option>
-                            <option value="6">Optometria</option>
+                            <option value="3">Neurología</option>
+                            <option value="4">Obstetricia y Ginecología</option>
+                            <option value="5">Urología</option>
+                            <option value="6">Pediatría</option>
+                            <option value="7">Psicologia</option>
+                            <option value="8">Ortopedia</option>
+                            <option value="9">Oftalmología</option>
+                            <option value="10">Dermatología</option>
+                            <option value="11">Anestesiología</option>
+                            <option value="12">Cirugía</option>
                         </select>
                         <i class="icon bi bi-heart-pulse"></i>
                     </div>
@@ -88,48 +94,152 @@
         </article>
         <section class="grid__cards">
             <section class="card">
-                Tarjeta 1
-                <section>
-                    <figure>
-                        <img src="./IMG/medico general.jpg" alt="">
-                    </figure>
+                <figure class="content">
+                     <img class="img" src="./IMG/medico general.jpg" alt="">
+                </figure>
+                <section class="content__text">
+                    <h2>Dra. Sofia Barrera</h2>
+                    <h3>Medica General</h3>
+                    <p>Experiencia: 10 años</p>
+                    <p>Medica general de alta calidad con diferentes diplomados.</p>
+                    <a class="btn__form" href="#form">Saca Tu Cita Ahora!!!</a>
                 </section>
             </section>
             <section class="card prueba">
-                Tarjeta 2
-            </section>
-            <section class="card">
-                Tarjeta 3
-            </section>
-            <section class="card">
-                Tarjeta 4
-            </section>
-            <section class="card">
-                Tarjeta 5
-            </section>
-            <section class="card">
-                Tarjeta 6
-                <section>
-                    <figure>
-                        <img src="./IMG/neurologia.jpg" alt="">
-                    </figure>
+                <figure class="content">
+                    <img class="img" src="./IMG/cardiologia.jpg" alt="">
+                </figure>
+                <section class="content__text">
+                    <h2>Dr. George Miller</h2>
+                    <h3>Cardiología</h3>
+                    <p>Experiencia: 5 años</p>
+                    <p>Cardiólogo con una amplia experiencia en el tratamiento de enfermedades del corazón.</p>
+                    <a class="btn__form" href="#form">Saca Tu Cita Ahora!!!</a>
                 </section>
             </section>
             <section class="card">
-                Tarjeta 7
+                <figure class="content">
+                    <img class="img" src="./IMG/neurologia.jpg" alt="">
+                </figure>
+                <section class="content__text">
+                    <h2>Dr. Brian McLaughlin</h2>
+                    <h3>Neurología</h3>
+                    <p>Experiencia: 18 años</p>
+                    <p>Neurólogo reconocido por su trabajo en el campo de las enfermedades neurodegenerativas.</p>
+                    <a class="btn__form" href="#form">Saca Tu Cita Ahora!!!</a>
+                </section>
+            </section>
+            <section class="card">
+                <figure class="content">
+                    <img class="img" src="./IMG/ginecologia.jpg" alt="">
+                </figure>
+                <section class="content__text">
+                    <h2>Dra. Luaren Morgan</h2>
+                    <h3>Obstetricia y Ginecología</h3>
+                    <p>Experiencia: 9 años</p>
+                    <p>Obstetra y ginecóloga que se especializa en el cuidado de la salud de la mujer.</p>
+                    <a class="btn__form" href="#form">Saca Tu Cita Ahora!!!</a>
+                </section>
+            </section>
+            <section class="card">
+                <figure class="content">
+                    <img class="img" src="./IMG/urologia.jpg" alt="">
+                </figure>
+                <section class="content__text">
+                    <h2>Dr. Omar Banos</h2>
+                    <h3>Urología</h3>
+                    <p>Experiencia: 6 años</p>
+                    <p>Urólogo con una amplia experiencia en el tratamiento de enfermedades del sistema urinario.</p>
+                    <a class="btn__form" href="#form">Saca Tu Cita Ahora!!!</a>
+                </section>
+            </section>
+            <section class="card">
+                <section>
+                    <figure class="content">
+                        <img class="img" src="./IMG/pediatra.jpg" alt="">
+                    </figure>
+                    <section class="content__text">
+                        <h2>Dra. Lorena Malaver</h2>
+                        <h3>Pediatría</h3>
+                        <p>Experiencia: 3 años</p>
+                        <p>pediatra dedicada que se especializa en el cuidado de la salud de los niños.</p>
+                        <a class="btn__form" href="#form">Saca Tu Cita Ahora!!!</a>
+                    </section>
+                </section>
+            </section>
+            <section class="card">
+                <figure class="content">
+                    <img class="img" src="./IMG/psicologia.jpg" alt="">
+                </figure>
+                <section class="content__text">
+                    <h2>Dra. Lizzeth Arévalo</h2>
+                    <h3>Psicologia</h3>
+                    <p>Experiencia: 3 años</p>
+                    <p>Psicóloga con una amplia experiencia en el tratamiento de trastornos mentales y emocionales.</p>
+                    <a class="btn__form" href="#form">Saca Tu Cita Ahora!!!</a>
+                </section>
             </section>
             <section class="card prueba">
-                Tarjeta 8
+                <figure class="content">
+                    <img class="img" src="./IMG/ortopedia.jpg" alt="">
+                </figure>
+                <section class="content__text">
+                    <h2>Dr. Donal Glover</h2>
+                    <h3>Ortopedia</h3>
+                    <p>Experiencia: 4 años</p>
+                    <p>Ortopedista con una larga trayectoria en el tratamiento de lesiones y enfermedades.</p>
+                    <a class="btn__form" href="#form">Saca Tu Cita Ahora!!!</a>
+                </section>
             </section>
             <section class="card prueba1">
-                Tarjeta 9
+                <figure class="content">
+                    <img class="img" src="./IMG/oftamologia.jpg" alt="">
+                </figure>
+                <section class="content__text">
+                    <h2>Dra. Karol Bolivar</h2>
+                    <h3>Oftalmología</h3>
+                    <p>Experiencia: 1 año</p>
+                    <p>Oftalmóloga que se dedica al diagnóstico y tratamiento de enfermedades oculares.</p>
+                    <a class="btn__form" href="#form">Saca Tu Cita Ahora!!!</a>
+                </section>
             </section>
             <section class="card">
-                Tarjeta 10
+                <figure class="content">
+                    <img class="img" src="./IMG/dermatologia.jpg" alt="">
+                </figure>
+                <section class="content__text">
+                    <h2>Dr. Jhon Alarcon</h2>
+                    <h3>Dermatología</h3>
+                    <p>Experiencia: 15 años</p>
+                    <p>Dermatólogo con una amplia experiencia en el diagnóstico y tratamiento de enfermedades de la piel.</p>
+                    <a class="btn__form" href="#form">Saca Tu Cita Ahora!!!</a>
+                </section>
+            </section>
+            <section class="card">
+                <figure class="content">
+                    <img class="img" src="./IMG/anestesiologo.jpg" alt="">
+                </figure>
+                <section class="content__text">
+                    <h2>Dr. Mac DeMarco</h2>
+                    <h3>Anestesiólogo</h3>
+                    <p>Experiencia: 25 años</p>
+                    <p>Anestesiólogo con una amplia experiencia en la administración de anestesia para procedimientos quirúrgicos</p>
+                    <a class="btn__form" href="#form">Saca Tu Cita Ahora!!!</a>
+                </section>
+            </section>
+            <section class="card">
+                <figure class="content">
+                    <img class="img" src="./IMG/cirugia.jpg" alt="">
+                </figure>
+                <section class="content__text">
+                    <h2>Dr. Jhon Alarcon</h2>
+                    <h3>Cirugía</h3>
+                    <p>Experiencia: 24 años</p>
+                    <p>Cirujano general con una amplia experiencia en una variedad de procedimientos quirúrgicos.</p>
+                    <a class="btn__form" href="#form">Saca Tu Cita Ahora!!!</a>
+                </section>
             </section>
         </section>
     </section>
-
-
 </body>
 </html>
