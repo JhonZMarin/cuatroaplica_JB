@@ -8,6 +8,9 @@
     <!-- hoja de estilos general  -->
     <link rel="stylesheet" href="./CSS/index.css">
 
+    <!-- hoja de estilos de recordar la cita  -->
+    <link rel="stylesheet" href="./CSS/date.css">
+
     <!-- hoja de estilos de perfiles de medicos  -->
     <link rel="stylesheet" href="./CSS/profile.css">
 
@@ -42,7 +45,7 @@
                 <hr class="line">
 
                 <form class="form" action="" id="form">
-                    <div class="input-box">
+                    <div class="input__box">
                         <input class="input" name="name" type="text" placeholder="Nombre Completo" required>
                         <i class="icon bi bi-person-fill"></i>
                     </div>
@@ -66,12 +69,12 @@
                         <i class="icon bi bi-heart-pulse"></i>
                     </div>
                     
-                    <div class="input-box">
+                    <div class="input__box">
                         <input class="input" name="telefono" type="tel" placeholder="Telefono" required>
                         <i class="icon bi bi-telephone"></i>
                     </div>
                     
-                    <div class="input-box">
+                    <div class="input__box">
                         <input class="input input--special" name="fechas" type="datetime-local">
                     </div>
 
@@ -83,9 +86,44 @@
             <figure class="figure">
                 <img class="figure__img" src="./IMG/salud.png" alt="">
             </figure>
-            <figcaption class="main-title">Aplicacion De Citas Medicas</figcaption>
+            <figcaption class="main__title">Aplicacion De Citas Medicas</figcaption>
         </section>
     </main>
+
+    <!-- remember your date  -->
+    <section class="date">
+        <section class="content__date">
+            <article class="text__date">
+                <h2 class="title2">¿No recuerdas cuando tienes tus citas medicas?</h2>
+                <h2 class="title2">No te preocupes, aqui te recordamos la fecha :D</h2>
+                <p class="parrafo">Ingresa tu Nombre y Telefono.<br> Y te mostraremos el agendamiento de tus citas!!!</p>
+            </article>
+            <form class="form form--special" action="" id="form">
+                <div class="input__box">
+                    <input class="input" name="name" type="text" placeholder="Nombre Completo" required>
+                    <i class="icon bi bi-person-fill"></i>
+                </div>
+                <div class="input__box">
+                    <input class="input" name="telefono" type="tel" placeholder="Telefono" required>
+                    <i class="icon bi bi-telephone"></i>
+                </div>
+                <button name="boton" class="btn" type="submit">Recordar <i class="bi bi-send-check"></i></button>
+            </form>
+        </section>
+    </section>
+    <section class="date date--block">
+        <section class="content__date content__date--special">
+            <article class="text__date">
+                <h2 class="title2">Tus Citas Medicas</h2>
+            </article>
+            <form class="form form--special" action="" id="form">
+                <div class="input__box">
+                    <input class="input" name="name" type="text" placeholder="Nombre Completo" required>                        <i class="icon bi bi-person-fill"></i>
+                </div>
+                <button name="boton" class="btn" type="button">Cerrar <i class="bi bi-x-circle-fill"></i></button>
+            </form>
+        </section>  
+    </section>
 
     <!-- profile  -->
     <section class="profiles">

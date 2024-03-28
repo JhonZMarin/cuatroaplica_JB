@@ -1,0 +1,72 @@
+:root{
+    --line-one-style: 4px dashed black;
+    --color-one:white;
+    --shadow-text: 2px 2px 2px black , 3px 3px 3px black ,4px 4px 4px grey,5px 5px 5px  red;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background: url(../IMG-TIC/fondo-chuphead.jpg);
+    background-size: cover;
+    user-select: none;
+}
+.title{
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 2rem;
+}
+.text{
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    text-shadow: var(--shadow-text);
+}
+.main{
+    background-color:   rgba(243, 202, 21, 0.5);
+    border: 2px solid black;
+    border-radius: 20px;
+    
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: minmax(100px, 200px);
+
+    justify-self: center;
+
+    padding: 2rem;
+    margin: 2rem;
+}
+.element{
+    
+    background-color: rgba(255, 0, 0, 0.24);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: var(--color-one);
+    font-weight: bold;
+    font-size: 4rem;
+}
+.up{
+    border-bottom: var(--line-one-style);
+    
+}
+.line__right{
+    border-right: var(--line-one-style);
+}
+.center{
+    border-bottom: var(--line-one-style);
+    
+}
+.down{
+    
+}

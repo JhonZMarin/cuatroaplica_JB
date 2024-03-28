@@ -69,6 +69,7 @@ body{
     display: flex;
     width: 100%;
     height: 100vh;
+    
 }
 .section{
     /* background-color: orange; */
@@ -78,7 +79,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
 }
 .section__target{
     color: var(--font-primary-color);
@@ -110,8 +111,9 @@ body{
     gap: 2rem;
     padding: 2rem;
     border-radius: 20px;
+    
 }
-.input-box{
+.input__box{
    
     width: 100%;
     height: 50px;
@@ -189,7 +191,8 @@ input::selection{
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: red;
+    border-bottom-left-radius: 10px;
+    border: rgba(255, 255, 255, 0.6) 2px solid;
     overflow: hidden;
     /* border: black solid 8px ; */
 }
@@ -197,7 +200,7 @@ input::selection{
     width: 100%;
     height: 100%; 
 }
-.main-title{
+.main__title{
     position: absolute;
     font-size: 3rem;
     font-weight: bold;
