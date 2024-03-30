@@ -38,21 +38,20 @@
             </li>
         </ul>
     </header>
-    <main class="main">
+    <main class="main" id="main">
         <section class="section">
             <section class="section__target">
                 <h2 class="title">Bienvenido, saca tu cita facil y rapido!!!</h2>
                 <hr class="line">
-
-                <form class="form" action="" id="form">
+                <form class="form" action="" id="formMain">
                     <div class="input__box">
-                        <input class="input" name="name" type="text" placeholder="Nombre Completo" required>
+                        <input id="name" class="input" type="text" placeholder="Nombre Completo" required minlength="3" maxlength="30">
                         <i class="icon bi bi-person-fill"></i>
                     </div>
 
                     <div class="input__box">
-                        <select class="input input--special" title="a" name="especialidades" required>
-                            <option disabled selected>Cita Por: Seleccione La Especialidad</option>
+                        <select id="especialidad" class="input input--special" required>
+                            <option disabled selected value="">Cita Por: Seleccione La Especialidad</option>
                             <option value="1">General</option>
                             <option value="2">Cardiologia</option>
                             <option value="3">Neurología</option>
@@ -70,15 +69,15 @@
                     </div>
                     
                     <div class="input__box">
-                        <input class="input" name="telefono" type="tel" placeholder="Telefono" required>
+                        <input id="telefono" class="input" name="telefono" type="tel" placeholder="Telefono" required pattern="[0-9]{10}">
                         <i class="icon bi bi-telephone"></i>
                     </div>
                     
                     <div class="input__box">
-                        <input class="input input--special" name="fechas" type="datetime-local">
+                        <input id="fecha" class="input input--special" name="fechas" type="datetime-local" required max="">
                     </div>
 
-                    <button name="boton" class="btn" type="submit">Enviar <i class="bi bi-send-check"></i></button>
+                    <button class="btn" type="submit">Enviar <i class="bi bi-send-check"></i></button>
                 </form>
             </section>
         </section>
@@ -95,32 +94,29 @@
         <section class="content__date">
             <article class="text__date">
                 <h2 class="title2">¿No recuerdas cuando tienes tus citas medicas?</h2>
+                <hr class="line">
                 <h2 class="title2">No te preocupes, aqui te recordamos la fecha :D</h2>
-                <p class="parrafo">Ingresa tu Nombre y Telefono.<br> Y te mostraremos el agendamiento de tus citas!!!</p>
+                <p class="parrafo">Ingresa tu Telefono.<br> Y te mostraremos el agendamiento de tus citas!!!</p>
             </article>
-            <form class="form form--special" action="" id="form">
+            <form class="form form--special" action="" id="formTwo">
                 <div class="input__box">
-                    <input class="input" name="name" type="text" placeholder="Nombre Completo" required>
-                    <i class="icon bi bi-person-fill"></i>
-                </div>
-                <div class="input__box">
-                    <input class="input" name="telefono" type="tel" placeholder="Telefono" required>
+                    <input id="telefonoVal" class="input" type="tel" placeholder="Ingresa Tu Telefono" required pattern="[0-9]{10}">
                     <i class="icon bi bi-telephone"></i>
                 </div>
-                <button name="boton" class="btn" type="submit">Recordar <i class="bi bi-send-check"></i></button>
+                <button name="boton" id="btn__remember" class="btn" type="submit">Recordar <i class="bi bi-send-check"></i></button>
             </form>
         </section>
     </section>
-    <section class="date date--block">
+    <section class="date date--block" id="remember">
         <section class="content__date content__date--special">
             <article class="text__date">
                 <h2 class="title2">Tus Citas Medicas</h2>
             </article>
             <form class="form form--special" action="" id="form">
-                <div class="input__box">
-                    <input class="input" name="name" type="text" placeholder="Nombre Completo" required>                        <i class="icon bi bi-person-fill"></i>
+                <div class="input__box" id="mostrarDatos" >
+                    
                 </div>
-                <button name="boton" class="btn" type="button">Cerrar <i class="bi bi-x-circle-fill"></i></button>
+                <button id="btn__close" class="btn" type="button">Cerrar <i class="bi bi-x-circle-fill"></i></button>
             </form>
         </section>  
     </section>
@@ -136,11 +132,11 @@
                      <img class="img" src="./IMG/medico general.jpg" alt="">
                 </figure>
                 <section class="content__text">
-                    <h2>Dra. Sofia Barrera</h2>
+                    <h2>Dra. Sofia Murcia</h2>
                     <h3>Medica General</h3>
                     <p>Experiencia: 10 años</p>
                     <p>Medica general de alta calidad con diferentes diplomados.</p>
-                    <a class="btn__form" href="#form">Saca Tu Cita Ahora!!!</a>
+                    <a class="btn__form" href="#main">Saca Tu Cita Ahora!!!</a>
                 </section>
             </section>
             <section class="card prueba">
@@ -152,7 +148,7 @@
                     <h3>Cardiología</h3>
                     <p>Experiencia: 5 años</p>
                     <p>Cardiólogo con una amplia experiencia en el tratamiento de enfermedades del corazón.</p>
-                    <a class="btn__form" href="#form">Saca Tu Cita Ahora!!!</a>
+                    <a class="btn__form" href="#main">Saca Tu Cita Ahora!!!</a>
                 </section>
             </section>
             <section class="card">
@@ -164,7 +160,7 @@
                     <h3>Neurología</h3>
                     <p>Experiencia: 18 años</p>
                     <p>Neurólogo reconocido por su trabajo en el campo de las enfermedades neurodegenerativas.</p>
-                    <a class="btn__form" href="#form">Saca Tu Cita Ahora!!!</a>
+                    <a class="btn__form" href="#main">Saca Tu Cita Ahora!!!</a>
                 </section>
             </section>
             <section class="card">
@@ -176,7 +172,7 @@
                     <h3>Obstetricia y Ginecología</h3>
                     <p>Experiencia: 9 años</p>
                     <p>Obstetra y ginecóloga que se especializa en el cuidado de la salud de la mujer.</p>
-                    <a class="btn__form" href="#form">Saca Tu Cita Ahora!!!</a>
+                    <a class="btn__form" href="#main">Saca Tu Cita Ahora!!!</a>
                 </section>
             </section>
             <section class="card">
@@ -188,7 +184,7 @@
                     <h3>Urología</h3>
                     <p>Experiencia: 6 años</p>
                     <p>Urólogo con una amplia experiencia en el tratamiento de enfermedades del sistema urinario.</p>
-                    <a class="btn__form" href="#form">Saca Tu Cita Ahora!!!</a>
+                    <a class="btn__form" href="#main">Saca Tu Cita Ahora!!!</a>
                 </section>
             </section>
             <section class="card">
@@ -201,7 +197,7 @@
                         <h3>Pediatría</h3>
                         <p>Experiencia: 3 años</p>
                         <p>pediatra dedicada que se especializa en el cuidado de la salud de los niños.</p>
-                        <a class="btn__form" href="#form">Saca Tu Cita Ahora!!!</a>
+                        <a class="btn__form" href="#main">Saca Tu Cita Ahora!!!</a>
                     </section>
                 </section>
             </section>
@@ -214,7 +210,7 @@
                     <h3>Psicologia</h3>
                     <p>Experiencia: 3 años</p>
                     <p>Psicóloga con una amplia experiencia en el tratamiento de trastornos mentales y emocionales.</p>
-                    <a class="btn__form" href="#form">Saca Tu Cita Ahora!!!</a>
+                    <a class="btn__form" href="#main">Saca Tu Cita Ahora!!!</a>
                 </section>
             </section>
             <section class="card prueba">
@@ -226,7 +222,7 @@
                     <h3>Ortopedia</h3>
                     <p>Experiencia: 4 años</p>
                     <p>Ortopedista con una larga trayectoria en el tratamiento de lesiones y enfermedades.</p>
-                    <a class="btn__form" href="#form">Saca Tu Cita Ahora!!!</a>
+                    <a class="btn__form" href="#main">Saca Tu Cita Ahora!!!</a>
                 </section>
             </section>
             <section class="card prueba1">
@@ -238,7 +234,7 @@
                     <h3>Oftalmología</h3>
                     <p>Experiencia: 1 año</p>
                     <p>Oftalmóloga que se dedica al diagnóstico y tratamiento de enfermedades oculares.</p>
-                    <a class="btn__form" href="#form">Saca Tu Cita Ahora!!!</a>
+                    <a class="btn__form" href="#main">Saca Tu Cita Ahora!!!</a>
                 </section>
             </section>
             <section class="card">
@@ -250,7 +246,7 @@
                     <h3>Dermatología</h3>
                     <p>Experiencia: 15 años</p>
                     <p>Dermatólogo con una amplia experiencia en el diagnóstico y tratamiento de enfermedades de la piel.</p>
-                    <a class="btn__form" href="#form">Saca Tu Cita Ahora!!!</a>
+                    <a class="btn__form" href="#main">Saca Tu Cita Ahora!!!</a>
                 </section>
             </section>
             <section class="card">
@@ -262,7 +258,7 @@
                     <h3>Anestesiólogo</h3>
                     <p>Experiencia: 25 años</p>
                     <p>Anestesiólogo con una amplia experiencia en la administración de anestesia para procedimientos quirúrgicos</p>
-                    <a class="btn__form" href="#form">Saca Tu Cita Ahora!!!</a>
+                    <a class="btn__form" href="#main">Saca Tu Cita Ahora!!!</a>
                 </section>
             </section>
             <section class="card">
@@ -274,10 +270,11 @@
                     <h3>Cirugía</h3>
                     <p>Experiencia: 24 años</p>
                     <p>Cirujano general con una amplia experiencia en una variedad de procedimientos quirúrgicos.</p>
-                    <a class="btn__form" href="#form">Saca Tu Cita Ahora!!!</a>
+                    <a class="btn__form" href="#main">Saca Tu Cita Ahora!!!</a>
                 </section>
             </section>
         </section>
     </section>
+    <script src="./JS/script.js"></script>
 </body>
 </html>

@@ -142,16 +142,15 @@ body{
     font-style: italic;
     font-size: .9rem;    
 }
-
 .input::placeholder{
     color: #067BC2;
     font-weight: bold;
     font-size: 1rem;
     letter-spacing: 1px;
 }
-input::selection{
-    color: white;
-  
+.input:enabled{
+    color:#0067b1;
+    font-weight: bold;
 }
 .icon{
     position: absolute;

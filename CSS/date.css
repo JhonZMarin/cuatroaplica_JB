@@ -41,7 +41,8 @@
 
 /* contenido escondido  */
 .date--block{
-    /* display: none; */
+    display: none;
+    
 }
 .content__date--special{
     flex-direction: column;
