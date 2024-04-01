@@ -83,7 +83,7 @@ var id=setInterval(() => {
         if((document.getElementById(document.activeElement.id).value==easy[choosen][document.activeElement.id-1])||(document.getElementById(document.activeElement.id).value=='')){
             for(var i=0;i<81;i++){
                 if(i==80 && document.getElementById((81).toString()).value!='' ){
-                        alert("you win !! congratulation.....");
+                        alert("GANASTEE !! FELICITACIONES.....");
                         clearInterval(id);
                         window.location.reload();
                 }
@@ -95,13 +95,13 @@ var id=setInterval(() => {
         else{
             if(document.getElementById("rem_live").innerHTML==1){
                 document.getElementById("rem_live").innerHTML==0;
-                alert("you lost !!");
+                alert("PERDISTE!!");
                 document.activeElement.value='';
                 window.location.reload();
 
             }
             else{
-            alert("you choose wrong number, you loose your one life !!");
+            alert("NUMERO EQUIVOCADO, PIERDES UNA VIDA !!");
             document.getElementById("rem_live").innerHTML=document.getElementById("rem_live").innerHTML-1;
             document.activeElement.value='';
             }
@@ -116,7 +116,7 @@ else if(level=="medio"){
         if((document.getElementById(document.activeElement.id).value==medium[choosen][document.activeElement.id-1])||(document.getElementById(document.activeElement.id).value=='')){
             for(var i=0;i<81;i++){
                 if(i==80 && document.getElementById((81).toString()).value!='' ){
-                        alert("you win !! congratulation.....");
+                        alert("GANASTEE !! FELICITACIONES.....");
                         clearInterval(id);
                         window.location.reload();
                 }
@@ -128,13 +128,13 @@ else if(level=="medio"){
         else{
             if(document.getElementById("rem_live").innerHTML==1){
                 document.getElementById("rem_live").innerHTML==0;
-                alert("you lost !!");
+                alert("PERDISTE!!");
                 document.activeElement.value='';
                 window.location.reload();
 
             }
             else{
-            alert("you choose wrong number, you loose your one life !!");
+            alert("NUMERO EQUIVOCADO, PIERDES UNA VIDA !!");
             document.getElementById("rem_live").innerHTML=document.getElementById("rem_live").innerHTML-1;
             document.activeElement.value='';
             }
@@ -149,7 +149,7 @@ else{
         if((document.getElementById(document.activeElement.id).value==hard[choosen][document.activeElement.id-1])||(document.getElementById(document.activeElement.id).value=='')){
             for(var i=0;i<81;i++){
                 if(i==80 && document.getElementById((81).toString()).value!='' ){
-                        alert("you win !! congratulation.....");
+                        alert("GANASTEE !! FELICITACIONES.....");
                         clearInterval(id);
                         window.location.reload();
                 }
@@ -161,13 +161,13 @@ else{
         else{
             if(document.getElementById("rem_live").innerHTML==1){
                 document.getElementById("rem_live").innerHTML==0;
-                alert("you lost !!");
+                alert("PERDISTE!!");
                 document.activeElement.value='';
                 window.location.reload();
 
             }
             else{
-            alert("you choose wrong number, you loose your one life !!");
+            alert("NUMERO EQUIVOCADO, PIERDES UNA VIDA !!");
             document.getElementById("rem_live").innerHTML=document.getElementById("rem_live").innerHTML-1;
             document.activeElement.value='';
             }
@@ -195,7 +195,7 @@ function solucion(){
         }
     }
     else{
-        alert("first choose the game and start it !!");
+        alert("PRIMERO ESCOGE EL MODO DE JUEGO Y EMPIEZA");
     }
 }
 
