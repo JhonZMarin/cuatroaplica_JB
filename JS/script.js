@@ -1,4 +1,6 @@
 
+// NO SIRVE PERO ESTA INTERESANTE PARA ESTUDIARLO 
+
 // --- ARREGLO DE USUARIOS --- 
 const usersArray = [];
 
@@ -42,9 +44,6 @@ formOne.addEventListener("submit", (event)=>{
     // agregamos los objetos al arreglo 
     usersArray.push(user);
 
-    // imprimimos los datos
-    printData(user);
-
     // limpia el formulario
     document.getElementById("formMain").reset();
 });
@@ -61,59 +60,85 @@ function validationDate(fecha) {
     }
 }
 
-// - - - IMPRIMIR LOS DATOS - - -
-function printData(user) {
-     // crear una etiqueta p para mostrar los datos 
-    const data = document.createElement("p");
-    // impresion 
-    data.textContent = `Nombre: ${user.userName}, Especialidad: ${user.specialty}, Telefono: ${user.cellphone}, Fecha: ${user.date}`;
-    // agregar el párrafo al div de datos mostrar datos
-    document.getElementById("mostrarDatos").appendChild(data);
-}
-
 // FORMULARIO DOS VALIDACION, COMPARACION Y MUESTRA DE DATOS
-
 const formTwo = document.getElementById("formTwo");
 
-formTwo.addEventListener("submit", (event2)=>{
+formTwo.addEventListener("submit",(event2)=>{
 
     event2.preventDefault();
 
-    // obtiene el valor del telefono para compararlo
-    let telefonoVal = document.getElementById("telefonoVal").value;
+    // obtenemos el valor 
+    const telefonoVal = document.getElementById("telefonoVal").value;
 
-    console.log(telefonoVal);
+    // buscamos dentro del arreglo al objeto usuario 
+    // y luego al atributo de telefono y lo comparamos 
 
-    // mostrar resultados 
-    showSection();
+    // Recorremos el arreglo para buscar el objeto y su atributo
+    let searchUser = usersArray.find(user => user.cellphone === telefonoVal);
+    
+    // searchUser, guarda un valor boleano 
+    if (searchUser) {
+        console.log("Usuario Encontrado",searchUser);  
+        
+        // showSection(user);
+
+         // Mostrar Seccion Oculta
+        const btn__remember = document.getElementById("btn__remember");
+        const remember = document.getElementById("remember");
+    
+        // Cuando haga click quita la clase con el display none
+        btn__remember.addEventListener("click", ()=>{
+
+            remember.classList.remove("date--block");
+
+            // imprimimos los datos
+            printData(user);
+            close();
+        } );
+        
+    }else{
+        console.log("Usuario No Encontrar",telefonoVal);
+    }
 
 });
 
-
-// - - - BUSCAR RESULTADOS ---
-function searchUser() {
-    return user
-}
-
-// - - - VER RESULTADOS ---
-function showSection() {
-     // Ocultar seccion
-     const btn__remember = document.getElementById("btn__remember");
-     const remember = document.getElementById("remember");
+// - - - VER RESULTADOS - - -
+// function showSection(user) {
+//      // Mostrar Seccion Oculta
+//      const btn__remember = document.getElementById("btn__remember");
+//      const remember = document.getElementById("remember");
  
-     // cuando haga click quita la clase con el display none
-     btn__remember.addEventListener("click", ()=>{
-         remember.classList.remove("date--block");
-     } );
-    close();
-}
-// - - - CERRAR RESULTADOS - - - 
-function close() {
-    const btn__close = document.getElementById("btn__close");
-    const remember = document.getElementById("remember");
+//      // Cuando haga click quita la clase con el display none
+//      btn__remember.addEventListener("click", ()=>{
 
-    btn__close.addEventListener("click", ()=>{
-        remember.classList.add("date--block");
-     })
-}
+//          remember.classList.remove("date--block");
+
+//         // imprimimos los datos
+//         printData(user);
+//         close();
+//      } );
+// }
+
+// - - - IMPRIMIR LOS DATOS - - -
+// function printData(user) {
+//     // crear una etiqueta p para mostrar los datos 
+//    const data = document.createElement("p");
+//    // impresion 
+//    data.textContent = `Nombre: ${user.userName}, Especialidad: ${user.specialty}, Telefono: ${user.cellphone}, Fecha: ${user.date}`;
+//    // agregar el párrafo al div de datos mostrar datos
+//    document.getElementById("mostrarDatos").appendChild(data);
+
+//    console.log(data);
+// }
+
+// // - - - CERRAR RESULTADOS - - - 
+// function close() {
+//     const btn__close = document.getElementById("btn__close");
+//     const remember = document.getElementById("remember");
+
+//     // Quitar Seccion Oculta
+//     btn__close.addEventListener("click", ()=>{
+//         remember.classList.add("date--block");
+//      })
+// }
 

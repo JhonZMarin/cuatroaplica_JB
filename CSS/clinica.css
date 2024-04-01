@@ -118,6 +118,22 @@ body{
     height: 50px;
     position: relative;
 }
+/* imprimir resultados  */
+.input__box--special{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    height: 100%;
+}
+.user{
+    background-color: white;
+    border: 1px solid var(--background-primary-color);
+    border-radius: 5px;
+    padding: 1rem;
+    color: var(--background-primary-color);
+}
+
 .input{
     width: 100%;
     height: 100%;
@@ -206,4 +222,11 @@ body{
     font-weight: bold;
     color: white;
     text-shadow: 3px 3px 3px #8CC084,  4px 4px 4px #0067b1;
+}
+.error{
+    display: none;
+}
+.error__p{
+    color: red;
+    font-weight: bold;
 }

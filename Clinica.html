@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Principal</title>
+
+    <!-- hoja de estilos general  -->
+    <link rel="stylesheet" href="./CSS/clinica.css">
+
+    <!-- hoja de estilos de recordar la cita  -->
+    <link rel="stylesheet" href="./CSS/date.css">
+
+    <!-- hoja de estilos de perfiles de medicos  -->
+    <link rel="stylesheet" href="./CSS/profile.css">
+
+    <!-- iconos  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">LOGO</h1>
+        <ul class="header__content">
+            <li>
+                <a class="button header__button--main" href="#main">
+                    Programa Tu Cita
+                </a>                
+            </li>
+            <li>
+                <a class="button" href="#rememberForm">
+                    Recuerda Tu Cita
+                </a>               
+            </li>
+            <li>
+                <a class="button" href="#profile">
+                    Perfiles Medicos
+                </a>                
+            </li>
+        </ul>
+    </header>
+    <main class="main" id="main">
+        <section class="section">
+            <section class="section__target">
+                <h2 class="title">Bienvenido, saca tu cita facil y rapido!!!</h2>
+                <hr class="line">
+                <form class="form" action="" id="formMain">
+                    <div class="input__box">
+                        <input id="name" class="input" type="text" placeholder="Nombre Completo" required minlength="3" maxlength="30">
+                        <i class="icon bi bi-person-fill"></i>
+                    </div>
+
+                    <div class="input__box">
+                        <select id="especialidad" class="input input--special" required>
+                            <option disabled selected value="">Cita Por: Seleccione La Especialidad</option>
+                            <option value="Medicina General">General</option>
+                            <option value="Cardiologia">Cardiologia</option>
+                            <option value="Neurología">Neurología</option>
+                            <option value="Obstetricia y Ginecología">Obstetricia y Ginecología</option>
+                            <option value="Urología">Urología</option>
+                            <option value="Pediatría">Pediatría</option>
+                            <option value="Psicologia">Psicologia</option>
+                            <option value="Ortopedia">Ortopedia</option>
+                            <option value="Oftalmología">Oftalmología</option>
+                            <option value="Dermatología">Dermatología</option>
+                            <option value="Anestesiología">Anestesiología</option>
+                            <option value="Cirugía">Cirugía</option>
+                        </select>
+                        <i class="icon bi bi-heart-pulse"></i>
+                    </div>
+                    
+                    <div class="input__box">
+                        <input id="telefono" class="input" name="telefono" type="tel" placeholder="Telefono" required pattern="[0-9]{10}">
+                        <i class="icon bi bi-telephone"></i>
+                    </div>
+                    
+                    <div class="input__box">
+                        <input id="fecha" class="input input--special" name="fechas" type="datetime-local" required max="">
+                    </div>
+
+                    <button class="btn" type="submit">Enviar <i class="bi bi-send-check"></i></button>
+                </form>
+            </section>
+        </section>
+        <section class="section">
+            <figure class="figure">
+                <img class="figure__img" src="./IMG/salud.png" alt="">
+            </figure>
+            <figcaption class="main__title">Aplicacion De Citas Medicas</figcaption>
+        </section>
+    </main>
+
+    <!-- remember your date  -->
+    <section class="date" id="rememberForm">
+        <section class="content__date">
+            <article class="text__date">
+                <h2 class="title2">¿No recuerdas cuando tienes tus citas medicas?</h2>
+                <hr class="line">
+                <h2 class="title2">No te preocupes, aqui te recordamos la fecha :D</h2>
+                <p class="parrafo">Ingresa tu Telefono, haz doble click.<br> Y te mostraremos el agendamiento de tus citas!!!</p>
+            </article>
+            <form class="form form--special" action="" id="formTwo">
+                <div class="input__box">
+                    <input id="telefonoVal" class="input" type="tel" placeholder="Ingresa Tu Telefono" required pattern="[0-9]{10}">
+                    <i class="icon bi bi-telephone"></i>
+                </div>
+                <button name="boton" id="btn__remember" class="btn" type="submit">Recordar <i class="bi bi-send-check"></i></button>
+                <section class="error error__p" id="error">
+                    <p>No se ha encontrado ninguna cita con este número</p>
+                </section>
+            </form>
+        </section>
+    </section>
+    <section class="date date--block" id="remember">
+        <section class="content__date content__date--special">
+            <article class="text__date">
+                <h2 class="title2">Tus Citas Medicas</h2>
+            </article>
+            <form class="form form--special" action="" id="form">
+                <div class="input__box input__box--special" id="mostrarDatos" >
+                    
+                </div>
+                <button id="btn__close" class="btn" type="button">Cerrar <i class="bi bi-x-circle-fill"></i></button>
+            </form>
+        </section>  
+    </section>
+
+    <!-- profile  -->
+    <section class="profiles" id="profile">
+        <article class="title">
+            <h2>Perfiles De Medicos</h2>
+        </article>
+        <section class="grid__cards">
+            <section class="card">
+                <figure class="content">
+                     <img class="img" src="./IMG/medico general.jpg" alt="">
+                </figure>
+                <section class="content__text">
+                    <h2>Dra. Sofia Murcia</h2>
+                    <h3>Medica General</h3>
+                    <p>Experiencia: 10 años</p>
+                    <p>Medica general de alta calidad con diferentes diplomados.</p>
+                    <a class="btn__form" href="#main">Saca Tu Cita Ahora!!!</a>
+                </section>
+            </section>
+            <section class="card prueba">
+                <figure class="content">
+                    <img class="img" src="./IMG/cardiologia.jpg" alt="">
+                </figure>
+                <section class="content__text">
+                    <h2>Dr. George Miller</h2>
+                    <h3>Cardiología</h3>
+                    <p>Experiencia: 5 años</p>
+                    <p>Cardiólogo con una amplia experiencia en el tratamiento de enfermedades del corazón.</p>
+                    <a class="btn__form" href="#main">Saca Tu Cita Ahora!!!</a>
+                </section>
+            </section>
+            <section class="card">
+                <figure class="content">
+                    <img class="img" src="./IMG/neurologia.jpg" alt="">
+                </figure>
+                <section class="content__text">
+                    <h2>Dr. Brian McLaughlin</h2>
+                    <h3>Neurología</h3>
+                    <p>Experiencia: 18 años</p>
+                    <p>Neurólogo reconocido por su trabajo en el campo de las enfermedades neurodegenerativas.</p>
+                    <a class="btn__form" href="#main">Saca Tu Cita Ahora!!!</a>
+                </section>
+            </section>
+            <section class="card">
+                <figure class="content">
+                    <img class="img" src="./IMG/ginecologia.jpg" alt="">
+                </figure>
+                <section class="content__text">
+                    <h2>Dra. Luaren Morgan</h2>
+                    <h3>Obstetricia y Ginecología</h3>
+                    <p>Experiencia: 9 años</p>
+                    <p>Obstetra y ginecóloga que se especializa en el cuidado de la salud de la mujer.</p>
+                    <a class="btn__form" href="#main">Saca Tu Cita Ahora!!!</a>
+                </section>
+            </section>
+            <section class="card">
+                <figure class="content">
+                    <img class="img" src="./IMG/urologia.jpg" alt="">
+                </figure>
+                <section class="content__text">
+                    <h2>Dr. Omar Banos</h2>
+                    <h3>Urología</h3>
+                    <p>Experiencia: 6 años</p>
+                    <p>Urólogo con una amplia experiencia en el tratamiento de enfermedades del sistema urinario.</p>
+                    <a class="btn__form" href="#main">Saca Tu Cita Ahora!!!</a>
+                </section>
+            </section>
+            <section class="card">
+                <section>
+                    <figure class="content">
+                        <img class="img" src="./IMG/pediatra.jpg" alt="">
+                    </figure>
+                    <section class="content__text">
+                        <h2>Dra. Lorena Malaver</h2>
+                        <h3>Pediatría</h3>
+                        <p>Experiencia: 3 años</p>
+                        <p>pediatra dedicada que se especializa en el cuidado de la salud de los niños.</p>
+                        <a class="btn__form" href="#main">Saca Tu Cita Ahora!!!</a>
+                    </section>
+                </section>
+            </section>
+            <section class="card">
+                <figure class="content">
+                    <img class="img" src="./IMG/psicologia.jpg" alt="">
+                </figure>
+                <section class="content__text">
+                    <h2>Dra. Lizzeth Arévalo</h2>
+                    <h3>Psicologia</h3>
+                    <p>Experiencia: 3 años</p>
+                    <p>Psicóloga con una amplia experiencia en el tratamiento de trastornos mentales y emocionales.</p>
+                    <a class="btn__form" href="#main">Saca Tu Cita Ahora!!!</a>
+                </section>
+            </section>
+            <section class="card prueba">
+                <figure class="content">
+                    <img class="img" src="./IMG/ortopedia.jpg" alt="">
+                </figure>
+                <section class="content__text">
+                    <h2>Dr. Donal Glover</h2>
+                    <h3>Ortopedia</h3>
+                    <p>Experiencia: 4 años</p>
+                    <p>Ortopedista con una larga trayectoria en el tratamiento de lesiones y enfermedades.</p>
+                    <a class="btn__form" href="#main">Saca Tu Cita Ahora!!!</a>
+                </section>
+            </section>
+            <section class="card prueba1">
+                <figure class="content">
+                    <img class="img" src="./IMG/oftamologia.jpg" alt="">
+                </figure>
+                <section class="content__text">
+                    <h2>Dra. Karol Bolivar</h2>
+                    <h3>Oftalmología</h3>
+                    <p>Experiencia: 1 año</p>
+                    <p>Oftalmóloga que se dedica al diagnóstico y tratamiento de enfermedades oculares.</p>
+                    <a class="btn__form" href="#main">Saca Tu Cita Ahora!!!</a>
+                </section>
+            </section>
+            <section class="card">
+                <figure class="content">
+                    <img class="img" src="./IMG/dermatologia.jpg" alt="">
+                </figure>
+                <section class="content__text">
+                    <h2>Dr. Jhon Alarcon</h2>
+                    <h3>Dermatología</h3>
+                    <p>Experiencia: 15 años</p>
+                    <p>Dermatólogo con una amplia experiencia en el diagnóstico y tratamiento de enfermedades de la piel.</p>
+                    <a class="btn__form" href="#main">Saca Tu Cita Ahora!!!</a>
+                </section>
+            </section>
+            <section class="card">
+                <figure class="content">
+                    <img class="img" src="./IMG/anestesiologo.jpg" alt="">
+                </figure>
+                <section class="content__text">
+                    <h2>Dr. Mac DeMarco</h2>
+                    <h3>Anestesiólogo</h3>
+                    <p>Experiencia: 25 años</p>
+                    <p>Anestesiólogo con una amplia experiencia en la administración de anestesia para procedimientos quirúrgicos</p>
+                    <a class="btn__form" href="#main">Saca Tu Cita Ahora!!!</a>
+                </section>
+            </section>
+            <section class="card">
+                <figure class="content">
+                    <img class="img" src="./IMG/cirugia.jpg" alt="">
+                </figure>
+                <section class="content__text">
+                    <h2>Dr. Jhon Alarcon</h2>
+                    <h3>Cirugía</h3>
+                    <p>Experiencia: 24 años</p>
+                    <p>Cirujano general con una amplia experiencia en una variedad de procedimientos quirúrgicos.</p>
+                    <a class="btn__form" href="#main">Saca Tu Cita Ahora!!!</a>
+                </section>
+            </section>
+        </section>
+    </section>
+    <!-- <script src="./JS/script.js"></script> -->
+    <script src="./JS/script-clinica.js"></script>
+</body>
+</html>
