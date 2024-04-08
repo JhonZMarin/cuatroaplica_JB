@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title>
+    <link rel="stylesheet" href="Css/calculadora.css">
+</head>
+
+<body>
+    <form action="" class="calculadora" name="calc">
+        <input type="text" name="txt" class="inputArea">
+        <span onclick="document.calc.txt.value +='1';">1</span>
+        <span onclick="document.calc.txt.value +='2';">2</span>
+        <span onclick="document.calc.txt.value +='3';">3</span>
+        <span class="limpiar" onclick="document.calc.txt.value = '';">C</span>
+        <span onclick="document.calc.txt.value +='4';">4</span>
+        <span onclick="document.calc.txt.value +='5';">5</span>
+        <span onclick="document.calc.txt.value +='6';">6</span>
+        <span class=" operaciones suma" onclick="document.calc.txt.value += '+';">+</span>
+        <span onclick="document.calc.txt.value +='7';">7</span>
+        <span onclick="document.calc.txt.value +='8';">8</span>
+        <span onclick="document.calc.txt.value +='9';">9</span>
+        <span onclick="document.calc.txt.value +='0';">0</span>
+        <span onclick="document.calc.txt.value = borrar(document.calc.txt.value);">B</span>
+        <span onclick="document.calc.txt.value +='.';">.</span>
+        <span class="operaciones" onclick="document.calc.txt.value += '-';">-</span>
+        <span class="igual" onclick="document.calc.txt.value = calcular(document.calc.txt.value);">=</span>
+        <span class="operaciones" onclick="document.calc.txt.value += '*';">*</span>
+        <span class="operaciones" onclick="document.calc.txt.value += '/';">/</span>
+    </form>
+    <div id="historial">
+        <h1>Historial</h1>
+        <p></p>
+    </div>
+    <script src="JS/calculadora.js"></script>
+</body>
+
+</html>

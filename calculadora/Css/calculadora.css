@@ -1,0 +1,79 @@
+*{
+    margin: 0px ;
+    padding: 0px ;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #2c775a;
+}
+.calculadora{
+    width: 240px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.calculadora span{
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: #fff;
+    color: #153464;
+}
+
+.calculadora span:hover{
+    cursor: pointer;
+}
+.calculadora .operaciones{
+    background: #b579c7;
+    color: #fff;
+}
+
+.calculadora .limpiar{
+    background:#d35978 ;
+    color: #fff;
+}
+
+.calculadora .inputArea{
+    grid-column: span 4;
+    padding: 20px 10px;
+    outline: none;
+    border: none;
+
+}
+
+
+.calculadora .suma{
+    grid-row: span 2;
+    height: 120px;
+    line-height: 120 px;
+}
+
+.calculadora .igual{
+    width: 120px;
+    grid-column: span 2;
+    background: #24ce65;
+}
+
+#historial{
+    width: 240px;
+    height: 355px;
+    overflow-y: scroll;
+    background:#24ce65;
+    box-sizing: border-box;
+    padding:10px 20px;
+}
+
+#historial h1{
+    padding:10px 0px;
+
+}
+
+#historial p:last-child{
+    color: #fff;
+}
