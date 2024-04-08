@@ -1,76 +1,79 @@
 *{
-    margin: 0px 0px;
-    padding: 0px 0px;
+    margin: 0px ;
+    padding: 0px ;
+    box-sizing: border-box;
 }
 
 body{
-    background-color: #b8b881;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #2c775a;
+}
+.calculadora{
+    width: 240px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.main{
-    background-color: #df4545;
-    height: 510px;
-    width: 500px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    border: 2px solid #6b83b6;
-    border-radius: 15px;
+.calculadora span{
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: #fff;
+    color: #153464;
 }
 
-.main button{
-    position: relative;
-    height: 70px;
-    width: 70px;
-    top: 5%;
-    left: 5%;
-    margin: 15px 10px;
-    font-size: 25px;
-    font-weight: bolder;
-    border: 2px solid #522e2e;
-    border-radius: 10px;
-    background-color: #2a2c6d;
-    color: #ffff;
+.calculadora span:hover{
+    cursor: pointer;
+}
+.calculadora .operaciones{
+    background: #b579c7;
+    color: #fff;
 }
 
-.main button:hover{
-    background-color: #302f2d;
+.calculadora .limpiar{
+    background:#d35978 ;
+    color: #fff;
 }
 
-#texto{
-    position: relative;
-    top: 6%;
-    left: 4%;
-    background-color: #ffff;
-    height: 50px;
-    width: 415px;
-    margin: 14px 10px;
-    padding: 10px;
-    color: #3d3333;
-    border: 2px solid #bd4c4c;
-    border-radius: 10px;
-    font-size: 30px;
-    font-family: cursive;
-    font-weight: bolder;
+.calculadora .inputArea{
+    grid-column: span 4;
+    padding: 20px 10px;
+    outline: none;
+    border: none;
+
 }
 
-#igual{
-    position: absolute;
-    top: 60%;
-    left: 79%;
-    height: 172px;
+
+.calculadora .suma{
+    grid-row: span 2;
+    height: 120px;
+    line-height: 120 px;
 }
 
-.main p{
-    position: absolute;
-    height: 30px;
-    width: 180px;
-    margin: 0px 0px;
-    top: 1%;
-    left: 30%;
-    padding-inline: 10px 10px;
-    font-size: 25px;
-    font-weight: bolder;
-    color: #6b5757;
+.calculadora .igual{
+    width: 120px;
+    grid-column: span 2;
+    background: #24ce65;
+}
+
+#historial{
+    width: 240px;
+    height: 355px;
+    overflow-y: scroll;
+    background:#24ce65;
+    box-sizing: border-box;
+    padding:10px 20px;
+}
+
+#historial h1{
+    padding:10px 0px;
+
+}
+
+#historial p:last-child{
+    color: #fff;
 }

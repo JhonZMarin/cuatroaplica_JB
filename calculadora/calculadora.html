@@ -9,30 +9,31 @@
 </head>
 
 <body>
-    <div class="main">
-        <p>CALCULADORA</p>
-        <input type="text" name="text" placeholder="0" id="texto"><br>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>DEL</button>
-        <button>C</button><br>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>*</button>
-        <button>/</button><br>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>-</button><br>
-        <button>H</button>
-        <button>0</button>
-        <button>.</button>
-        <button>+</button>
-        <button id="igual">=</button>
+    <form action="" class="calculadora" name="calc">
+        <input type="text" name="txt" class="inputArea">
+        <span onclick="document.calc.txt.value +='1';">1</span>
+        <span onclick="document.calc.txt.value +='2';">2</span>
+        <span onclick="document.calc.txt.value +='3';">3</span>
+        <span class="limpiar" onclick="document.calc.txt.value = '';">C</span>
+        <span onclick="document.calc.txt.value +='4';">4</span>
+        <span onclick="document.calc.txt.value +='5';">5</span>
+        <span onclick="document.calc.txt.value +='6';">6</span>
+        <span class=" operaciones suma" onclick="document.calc.txt.value += '+';">+</span>
+        <span onclick="document.calc.txt.value +='7';">7</span>
+        <span onclick="document.calc.txt.value +='8';">8</span>
+        <span onclick="document.calc.txt.value +='9';">9</span>
+        <span onclick="document.calc.txt.value +='0';">0</span>
+        <span onclick="document.calc.txt.value = borrar(document.calc.txt.value);">B</span>
+        <span onclick="document.calc.txt.value +='.';">.</span>
+        <span class="operaciones" onclick="document.calc.txt.value += '-';">-</span>
+        <span class="igual" onclick="document.calc.txt.value = calcular(document.calc.txt.value);">=</span>
+        <span class="operaciones" onclick="document.calc.txt.value += '*';">*</span>
+        <span class="operaciones" onclick="document.calc.txt.value += '/';">/</span>
+    </form>
+    <div id="historial">
+        <h1>Historial</h1>
+        <p></p>
     </div>
-
     <script src="JS/calculadora.js"></script>
 </body>
 
